@@ -1,3 +1,4 @@
+# coding=utf-8
 from __future__ import print_function
 from os import environ
 from googleapiclient.discovery import build
@@ -14,6 +15,8 @@ YOUTUBE_API_SERVICE_NAME = 'youtube'
 YOUTUBE_API_VERSION = 'v3'
 
 #---------------- Speech outputs -----------------------------------------------
+speech = {}
+speech["en-GB"]  = {}
 speech["en-GB"]["welcome"] = 'Welcome to Youtube. Say, for example, play videos by The Beatles.'
 speech["en-GB"]["welcome_reprompt"] = 'Or you can say, shuffle songs by Michael Jackson.'
 speech["en-GB"]["example"] = 'For example say, play videos by Fall Out Boy'
@@ -29,18 +32,19 @@ speech["en-GB"]["cant_find"] = "I can't find out the name of the current video."
 speech["en-GB"]["now_playing"] = "Now playing "
 speech["en-GB"]["nothing_playing"] = "Nothing is currently playing."
 
-speech["es-ES"]["welcome"] = 'Bienvenido a Youtube. Di, por ejemplo, pon videos de los Beatles.'
-speech["es-ES"]["welcome_reprompt"] = 'O puedes decir, pon canciones aleatorias de el fary.'
-speech["es-ES"]["example"] = 'Por ejemplo di, pon videos de Nino bravo'
+speech["es-ES"]  = {}
+speech["es-ES"]["welcome"] = 'Bienvenido a Youtube. Di, por ejemplo, pon vídeos de the Beatles'
+speech["es-ES"]["welcome_reprompt"] = 'O puedes decir, pon canciones aleatorias de el Fary.'
+speech["es-ES"]["example"] = 'Por ejemplo di, pon videos de Nino Bravo'
 speech["es-ES"]["forbidden"] = 'No puedes hacer eso con este skill.'
 speech["es-ES"]["playing"] = "Reproduciendo " 
-speech["es-ES"]["pausing"] = "Pausando"
-speech["es-ES"]["the_end"] = "No hay mas elementos en esta lista de reproduccion."
+speech["es-ES"]["pausing"] = "Pausa"
+speech["es-ES"]["the_end"] = "No hay mas elementos en esta lista de reproducción."
 speech["es-ES"]["resuming"] = "Continuando..."
-speech["es-ES"]["cant_resume"] = "No he sido capaz de continuar la reproduccion."
+speech["es-ES"]["cant_resume"] = "No he sido capaz de continuar la reproducción."
 speech["es-ES"]["ok"] = "Vale"
-speech["es-ES"]["cant_play"] = "No he podido poner el video."
-speech["es-ES"]["cant_find"] = "No he podido encontrar el nombre del video actual."
+speech["es-ES"]["cant_play"] = "No he podido poner el vídeo."
+speech["es-ES"]["cant_find"] = "No he podido encontrar el nombre del vídeo actual."
 speech["es-ES"]["now_playing"] = "Ahora estoy reproduciendo "
 speech["es-ES"]["nothing_playing"] = "No estoy reproduciendo nada actualmente."
 
@@ -437,7 +441,7 @@ def search(intent, session):
 
 def stop(intent, session):
     should_end_session = True
-    return build_response(build_stop_speechlet_response(speech[locale]["pausing"] +, should_end_session))
+    return build_response(build_stop_speechlet_response(speech[locale]["pausing"], should_end_session))
 
 def nearly_finished(event):
     should_end_session = True
