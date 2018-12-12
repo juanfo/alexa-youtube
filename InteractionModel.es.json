@@ -1,0 +1,150 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "youtube",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PauseIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ResumeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "SearchIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "ponga musica de {query}",
+                        "ponga musica de {query}",
+                        "ponga canciones de {query}",
+                        "ponga videos de {query}",
+                        "busque {query}",
+                        "ponga {query}",
+                        "pon musica de {query}",
+                        "pon musica de {query}",
+                        "pon canciones de {query}",
+                        "pon videos de {query}",
+                        "busca {query}",
+                        "pon {query}"
+                    ]
+                },
+                {
+                    "name": "ShuffleIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "pon aleatorio {query}",
+                        "pon canciones aleatorias de {query}",
+                        "pon musica aleatoria de {query}",
+                        "pon videos aleatorios de {query}",
+                        "ponga aleatorio {query}",
+                        "ponga canciones aleatorias de {query}",
+                        "ponga musica aleatoria de {query}",
+                        "ponga videos aleatorios de {query}"
+                    ]
+                },
+                {
+                    "name": "PlaylistIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "empieza playlist de {query}",
+                        "escucha playlist de {query}",
+                        "ponga playlist de {query}",
+                        "pon playlist de {query}"
+                    ]
+                },
+                {
+                    "name": "ShufflePlaylistIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "playlist aleatoria de {query}"
+                    ]
+                },
+                {
+                    "name": "ChannelIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "Escucha el canal de {query}",
+                        "Empieza el canal de {query} ",
+                        "Ponga el canal de {query}",
+                        "Pon el canal de {query}"
+                    ]
+                },
+                {
+                    "name": "ShuffleChannelIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "Shuffle channel {query}"
+                    ]
+                },
+                {
+                    "name": "NowPlayingIntent",
+                    "slots": [],
+                    "samples": [
+                        "Quien es",
+                        "Qué vídeo está sonando",
+                        "Qué canción está sonando",
+                        "Qué es esto",
+                        "Qué canción es esta",
+                        "Qué has puesto"
+                    ]
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": []
+        }
+    }
+}
